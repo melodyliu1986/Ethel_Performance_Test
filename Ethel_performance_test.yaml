@@ -10,7 +10,7 @@
     node: Ethel-performance-test
     scm:
         - git:
-            url: git@github.com:melodyliu1986/Ethel_Performance_Test.git
+            url: https://github.com/melodyliu1986/Ethel_Performance_Test.git
             branches:
                 - origin/master
     builders:
