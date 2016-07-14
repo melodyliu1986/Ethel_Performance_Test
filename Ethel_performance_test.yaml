@@ -1,0 +1,33 @@
+- project:
+    name: Ethel_performance_test
+    jobs:
+        - "Ethel_performance_test"
+
+- job-template:
+    name: "Ethel_performance_test"
+    project-type: freestyle
+    description: "This is the Ethel performance job."
+    node: Ethel-performance-test
+    scm:
+        - git:
+            url: git@github.com:melodyliu1986/Ethel_Performance_Test.git
+            branches:
+                - origin/master
+    builders:
+        - shell: |
+            rm -f log/*
+            bash /home/apache-jmeter-3.0/bin/jmeter.sh -n -t Ethel_Tests.jmx -l log/Ethel_test_result.jtl
+
+    publishers:
+        - archive:
+            artifacts: "jmeter.log, log/*"
+        - performance:
+            failed-threshold: 0
+            unstable-threshold: 0
+            report:
+                - jmeter: "log/*.jtl"
+
+
+
+
+
