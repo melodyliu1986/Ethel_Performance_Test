@@ -16,7 +16,14 @@
     builders:
         - shell: |
             rm -f log/*
-            bash /home/apache-jmeter-3.0/bin/jmeter.sh -n -t Ethel_Tests.jmx -l log/Ethel_test_result.jtl
+            bash /home/apache-jmeter-3.0/bin/jmeter.sh -n -t Test_Plans/Ethel_Tests_Single_Thread1.jmx -l log/Ethel_test_result1.jtl
+            bash /home/apache-jmeter-3.0/bin/jmeter.sh -n -t Test_Plans/Ethel_Tests_Single_Threads10.jmx -l log/Ethel_test_result2.jtl
+            bash /home/apache-jmeter-3.0/bin/jmeter.sh -n -t Test_Plans/Ethel_Tests_Single_Threads50.jmx -l log/Ethel_test_result3.jtl
+            bash /home/apache-jmeter-3.0/bin/jmeter.sh -n -t Test_Plans/Ethel_Tests_Single_Threads100.jmx -l log/Ethel_test_result4.jtl
+            bash /home/apache-jmeter-3.0/bin/jmeter.sh -n -t Test_Plans/Ethel_Tests_Mixed_Thread1.jmx -l log/Ethel_test_result5.jtl
+            bash /home/apache-jmeter-3.0/bin/jmeter.sh -n -t Test_Plans/Ethel_Tests_Mixed_Threads10.jmx -l log/Ethel_test_result6.jtl
+            bash /home/apache-jmeter-3.0/bin/jmeter.sh -n -t Test_Plans/Ethel_Tests_Mixed_Threads20.jmx -l log/Ethel_test_result7.jtl
+            bash /home/apache-jmeter-3.0/bin/jmeter.sh -n -t Test_Plans/Ethel_Tests_Mixed_Threads25.jmx -l log/Ethel_test_result8.jtl
 
     publishers:
         - archive:
