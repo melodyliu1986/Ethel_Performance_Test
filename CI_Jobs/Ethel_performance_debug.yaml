@@ -1,0 +1,28 @@
+- project:
+    name: Ethel_performance_debug
+    jobs:
+        - "Ethel_performance_debug"
+
+- job-template:
+    name: "Ethel_performance_debug"
+    project-type: freestyle
+    description: "This is the Ethel performance debug job, will remove it later."
+    node: Ethel-performance-test
+
+    builders:
+        - shell: |
+            wget http://hp-z220-11.qe.lab.eng.nay.redhat.com/home/soliu/log/Ethel_test_result.jtl --no-check-certificate
+
+    publishers:
+        - archive:
+            artifacts: "*.jtl"
+        - performance:
+            failed-threshold: 0
+            unstable-threshold: 0
+            report:
+                - jmeter: "*.jtl"
+
+
+
+
+
