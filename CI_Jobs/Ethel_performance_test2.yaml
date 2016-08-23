@@ -13,9 +13,13 @@
             url: https://github.com/melodyliu1986/Ethel_Performance_Test.git
             branches:
                 - origin/master
+
+    triggers:
+        - timed: "H(0-2) 1 * * *"
+
     builders:
         - shell: |
-            rm -f log/*
+            rm -f  log/*
             # Concurrent test for Single API.
             bash /home/apache-jmeter-3.0/bin/jmeter.sh -n -t Test_Plans/Ethel_Tests_Single_Thread1.jmx -l log/Ethel_result_single_thread1.jtl
             bash /home/apache-jmeter-3.0/bin/jmeter.sh -n -t Test_Plans/Ethel_Tests_Single_Threads10.jmx -l log/Ethel_result_single_threads10.jtl
@@ -31,6 +35,7 @@
             sleep 60s
 
             # Stress test.
+            python /home/workspace/Ethel_performance_test2/Test_Data/generate_test_data.py
             bash /home/apache-jmeter-3.0/bin/jmeter.sh -n -t Test_Plans/Ethel_Tests_Stress_Account_Attach.jmx -l log/Ethel_result_stress_account_attach.jtl
             bash /home/apache-jmeter-3.0/bin/jmeter.sh -n -t Test_Plans/Ethel_Tests_Stress_Account_View.jmx -l log/Ethel_result_stress_account_view.jtl
 
