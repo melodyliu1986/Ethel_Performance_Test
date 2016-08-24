@@ -73,7 +73,7 @@ info_str = """{0},,{1}
 """.format(username_line1, skus_line1, username_line2, skus_line2, username_line3, skus_line3, username_line4, skus_line4, username_line5, skus_line5)
 info_str = info_str.replace("\'", "\"")
 
-data_path = "/home/workspace/Ethel_performance_test2/test_stress_account_attach.csv"
+data_path = "/home/workspace/Ethel_performance_test2/Test_Data/test_stress_account_attach.csv"
 with open(data_path, "a+") as f:
     f.write(info_str)
 
