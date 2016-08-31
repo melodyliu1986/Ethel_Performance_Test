@@ -108,9 +108,9 @@
         <stringProp name="ThreadGroup.ramp_time"></stringProp>
         <longProp name="ThreadGroup.start_time">1468998108000</longProp>
         <longProp name="ThreadGroup.end_time">1468998108000</longProp>
-        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <boolProp name="ThreadGroup.scheduler">true</boolProp>
         <stringProp name="ThreadGroup.duration"></stringProp>
-        <stringProp name="ThreadGroup.delay">240</stringProp>
+        <stringProp name="ThreadGroup.delay">60</stringProp>
       </ThreadGroup>
       <hashTree>
         <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Account_View10" enabled="true">
@@ -160,9 +160,9 @@
         <stringProp name="ThreadGroup.ramp_time"></stringProp>
         <longProp name="ThreadGroup.start_time">1468998108000</longProp>
         <longProp name="ThreadGroup.end_time">1468998108000</longProp>
-        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <boolProp name="ThreadGroup.scheduler">true</boolProp>
         <stringProp name="ThreadGroup.duration"></stringProp>
-        <stringProp name="ThreadGroup.delay">240</stringProp>
+        <stringProp name="ThreadGroup.delay">60</stringProp>
       </ThreadGroup>
       <hashTree>
         <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Account_View100" enabled="true">
@@ -212,9 +212,9 @@
         <stringProp name="ThreadGroup.ramp_time"></stringProp>
         <longProp name="ThreadGroup.start_time">1468998108000</longProp>
         <longProp name="ThreadGroup.end_time">1468998108000</longProp>
-        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <boolProp name="ThreadGroup.scheduler">true</boolProp>
         <stringProp name="ThreadGroup.duration"></stringProp>
-        <stringProp name="ThreadGroup.delay">240</stringProp>
+        <stringProp name="ThreadGroup.delay">60</stringProp>
       </ThreadGroup>
       <hashTree>
         <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Account_View1000" enabled="true">
@@ -264,9 +264,9 @@
         <stringProp name="ThreadGroup.ramp_time"></stringProp>
         <longProp name="ThreadGroup.start_time">1468998108000</longProp>
         <longProp name="ThreadGroup.end_time">1468998108000</longProp>
-        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <boolProp name="ThreadGroup.scheduler">true</boolProp>
         <stringProp name="ThreadGroup.duration"></stringProp>
-        <stringProp name="ThreadGroup.delay">240</stringProp>
+        <stringProp name="ThreadGroup.delay">60</stringProp>
       </ThreadGroup>
       <hashTree>
         <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Account_View10000" enabled="true">
