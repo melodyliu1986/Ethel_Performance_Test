@@ -22,21 +22,28 @@
             rm -f  log/*
             # Concurrent test for Single API.
             bash /home/apache-jmeter-3.0/bin/jmeter.sh -n -t Test_Plans/Ethel_Tests_Single_Thread1.jmx -l log/Ethel_result_single_thread1.jtl
+            sleep 60s
             bash /home/apache-jmeter-3.0/bin/jmeter.sh -n -t Test_Plans/Ethel_Tests_Single_Threads10.jmx -l log/Ethel_result_single_threads10.jtl
+            sleep 60s
             bash /home/apache-jmeter-3.0/bin/jmeter.sh -n -t Test_Plans/Ethel_Tests_Single_Threads50.jmx -l log/Ethel_result_single_threads50.jtl
+            sleep 60s
             bash /home/apache-jmeter-3.0/bin/jmeter.sh -n -t Test_Plans/Ethel_Tests_Single_Threads100.jmx -l log/Ethel_result_single_threads100.jtl
             sleep 60s
 
             # Concurrent test for Multi API.
             bash /home/apache-jmeter-3.0/bin/jmeter.sh -n -t Test_Plans/Ethel_Tests_Mixed_Thread1.jmx -l log/Ethel_result_mixed_thread1.jtl
+            sleep 60s
             bash /home/apache-jmeter-3.0/bin/jmeter.sh -n -t Test_Plans/Ethel_Tests_Mixed_Threads10.jmx -l log/Ethel_result_mixed_threads10.jtl
+            sleep 60s
             bash /home/apache-jmeter-3.0/bin/jmeter.sh -n -t Test_Plans/Ethel_Tests_Mixed_Threads20.jmx -l log/Ethel_result_mixed_threads20.jtl
+            sleep 60s
             bash /home/apache-jmeter-3.0/bin/jmeter.sh -n -t Test_Plans/Ethel_Tests_Mixed_Threads25.jmx -l log/Ethel_result_mixed_threads25.jtl
             sleep 60s
 
             # Stress test.
             python /home/workspace/Ethel_performance_test2/Test_Data/generate_test_data.py
             bash /home/apache-jmeter-3.0/bin/jmeter.sh -n -t Test_Plans/Ethel_Tests_Stress_Account_Attach.jmx -l log/Ethel_result_stress_account_attach.jtl
+            sleep 60s
             bash /home/apache-jmeter-3.0/bin/jmeter.sh -n -t Test_Plans/Ethel_Tests_Stress_Account_View.jmx -l log/Ethel_result_stress_account_view.jtl
 
     publishers:
