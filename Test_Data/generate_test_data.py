@@ -8,6 +8,7 @@ import MySQLdb
 
 import requests
 import random
+import os
 
 
 class Accounts:
@@ -74,6 +75,8 @@ info_str = """{0},,{1}
 info_str = info_str.replace("\'", "\"")
 
 data_path = "/home/workspace/Ethel_performance_test2/Test_Data/test_stress_account_attach.csv"
+if os.path.exists(data_path):
+    os.remove(data_path)
 with open(data_path, "a+") as f:
     f.write(info_str)
 
