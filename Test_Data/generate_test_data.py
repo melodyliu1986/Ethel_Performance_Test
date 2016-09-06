@@ -16,7 +16,7 @@ class Accounts:
     """
     def __init__(self):
         self.check_url = "https://subscription.rhsm.stage.redhat.com/subscription/products/MCT2888"
-        self.test_accounts = ["stress_account_attach_{0}".format(i) for i in range(1000)]
+        self.test_accounts = ["stress_account_attach_soliu_{0}".format(i) for i in range(1000)]
         self.password = "redhat"
         # DB info.
         self.db_host = "account-manager-stage.app.eng.rdu2.redhat.com"
